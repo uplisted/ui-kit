@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cs from './cs.pcss'; 
 
 const Text = (props) => {
   const style = {
@@ -11,7 +12,7 @@ const Text = (props) => {
   };
 
   return (
-    <div style={style}>
+    <div style={style} className={cs.root}>
       {props.children}
     </div>
   );

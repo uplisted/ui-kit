@@ -1,5 +1,23 @@
 'use strict';
 
+function __$styleInject(css, returnValue) {
+  if (typeof document === 'undefined') {
+    return returnValue;
+  }
+  css = css || '';
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+  head.appendChild(style);
+  
+  if (style.styleSheet){
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+  return returnValue;
+}
+
 Object.defineProperty(exports, '__esModule', { value: true });
 
 /*
@@ -4351,6 +4369,8 @@ if (process.env.NODE_ENV !== 'production') {
 }
 });
 
+var cs = __$styleInject("._root_1hc36_1 {\n  font-family: Arial;\n}", { "root": "_root_1hc36_1" });
+
 var Text = function Text(props) {
   var style = {
     color: props.color,
@@ -4362,7 +4382,7 @@ var Text = function Text(props) {
 
   return react.createElement(
     'div',
-    { style: style },
+    { style: style, className: cs.root },
     props.children
   );
 };
