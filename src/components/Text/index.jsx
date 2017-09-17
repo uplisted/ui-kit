@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import cs from './cs.pcss'; 
+import cs from './component.pcss';
 
 const Text = (props) => {
   const style = {
