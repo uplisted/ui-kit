@@ -1,0 +1,41 @@
+.root {
+  display: flex;
+  width: 100%;
+}
+
+.root > div > div:first-child .button {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.root > div > div:last-child .button {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.button {
+  font-size: 16px;
+  font-family: Lato, sans-serif;
+  height: 30px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  background-color: #f9fbff;
+  color: #c8cacf;
+  border: 1px solid #c8cacf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .1s all;
+}
+
+.button:not(.active):hover {
+  border: 1px solid #7178ff;
+  color: #7178ff;
+}
+
+.active {
+  background-color: #7178ff;
+  border: 1px solid #7178ff;
+  color: white;
+}
