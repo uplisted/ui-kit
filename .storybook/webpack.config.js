@@ -19,6 +19,12 @@ module.exports = {
           'postcss-loader',
         ],
       },
+      {
+        test: /\.woff(2)?$/,
+        use: [
+          'file-loader',
+        ],
+      },
     ],
   },
 };
