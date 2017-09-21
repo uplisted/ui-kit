@@ -93,7 +93,7 @@ const getColumnStyles = (config) => {
   }
 
   return {
-    flexBasis: config.size ? calculateSize(config.size) : '100%',
+    flexBasis: config.size ? calculateSize(config.size) : 'auto',
     marginLeft: config.offset ? calculateSize(config.offset) : 0,
   };
 };

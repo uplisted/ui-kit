@@ -52,7 +52,7 @@ const shape = PropTypes.shape({
   align: PropTypes.string,
   justify: PropTypes.string,
   wrap: PropTypes.string,
-  height: PropTypes.oneOf([
+  height: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
   ]),

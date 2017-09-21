@@ -26,13 +26,13 @@ class Col extends Component {
   }
 
   resize() {
-    const viewPortConfig = getViewPortConfig(window.innerWidth, {
-      xl: this.props.xl,
-      lg: this.props.lg,
-      md: this.props.md,
-      sm: this.props.sm,
-      xs: this.props.xs,
-    });
+    const { xl, lg, md, sm, xs } = this.props;
+
+    if (!xl && !lg && !md && !sm && !xs) {
+      return;
+    }
+
+    const viewPortConfig = getViewPortConfig(window.innerWidth, { xl, lg, md, sm, xs });
 
     this.setState({
       viewPortConfig,

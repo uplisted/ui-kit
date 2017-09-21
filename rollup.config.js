@@ -15,7 +15,7 @@ import cssnano from 'cssnano';
 const cssExportMap = {};
 
 export default {
-  input: 'src/lol.jsx',
+  input: 'src/index.js',
   output: {
     file: 'dist/lol.jsx',
     format: 'cjs',
@@ -26,6 +26,10 @@ export default {
     }),
     commonjs({
       include: /node_modules/,
+      namedExports: {
+        'node_modules/react/react.js': ['Children', 'Component', 'PropTypes', 'createElement'],
+        'node_modules/react-dom/index.js': ['render']
+      },
     }),
     postcss({
       plugins: [
