@@ -14,7 +14,7 @@ const content = (
 storiesOf('Blurable', module)
   .add('simple', withInfo(() => {
     return (
-      <Blurable content={content} isOpen onClose={action('blur-detected')}>
+      <Blurable content={content} isOpen onToggle={action('blur-detected')}>
         Target content
       </Blurable>
     );

@@ -1,19 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 import cs from './component.pcss';
+import Flex from '../Flex';
 
 const TabItem = (props) => {
+  const activeClassName = props.isActive ? cs.active : '';
+
   return (
-    <NavLink exact className={cs.root} activeClassName={cs.active} to={props.href}>
-      {props.children}
-    </NavLink>
+    <div className={`${cs.root} ${activeClassName}`}>
+      <Flex xs={{ align: 'center', justify: 'center', height: '100%' }}>
+        {props.children}
+      </Flex>
+    </div>
   );
 };
 
 TabItem.propTypes = {
   children: PropTypes.node.isRequired,
-  href: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
 };
 
 export default TabItem;

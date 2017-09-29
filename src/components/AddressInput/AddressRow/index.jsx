@@ -1,98 +1,65 @@
-/**
- * eslint-disable camelcase
- */
 import React from 'react';
+import PropTypes from 'prop-types';
 import parseSubstr from './util/parseSubstr';
 import cs from './component.pcss';
 
-/**
- * @class AddressLineRow
- */
-class AddressLineRow extends React.Component
-{
+class AddressRow extends React.Component {
+  onClick() {
+    this.props.onClick(this.props.address.description);
+  }
 
-	static propTypes = {
+  renderText() {
+    const subStr = parseSubstr(
+      this.props.address.description,
+      this.props.address.matched_substrings);
 
-		/**
-		 * AddressLineRow object
-		 */
-		address: React.PropTypes.shape( {
-			description: React.PropTypes.string,
-			'matched_substrings': React.PropTypes.arrayOf(
-				React.PropTypes.shape( {
-					offset: React.PropTypes.number,
-					length: React.PropTypes.number
-				} )
-			)
-		} ).isRequired,
+    const map = (item, i) => {
+      const className = item.isMatched ?
+        cs.matched :
+        '';
 
-		isActive: React.PropTypes.bool,
+      return (
+        <span
+          key={i}
+          className={className}
+        >
+          { item.text }
+        </span>
+      );
+    };
 
-		onClick: React.PropTypes.func
-	};
+    return subStr.map(map);
+  }
 
-	/**
-	 * @constructor
-	 */
-	constructor()
-	{
-		super();
-	}
+  render() {
+    const className = this.props.isActive ?
+      `${cs.root} ${cs.active}` :
+      cs.root;
 
-	/**
-	 * @return {void}
-	 */
-	onClick()
-	{
-		this.props.onClick( this.props.address.description );
-	}
-
-	/**
-	 * Render component
-	 * @return {XML} xml content
-	 */
-	renderText()
-	{
-		const subStr = parseSubstr(
-			this.props.address.description,
-			this.props.address.matched_substrings );
-
-		const map = ( item, i ) =>
-		{
-			const className = item.isMatched ?
-								cs.matched :
-								'';
-
-			return (
-				<span
-					key={ i }
-					className={ className }>
-					{ item.text }
-				</span>
-			);
-		};
-
-		return subStr.map( map );
-	}
-
-	/**
-	 * Render component
-	 * @return {XML} xml content
-	 */
-	render()
-	{
-		const className = this.props.isActive ?
-							`${ cs.root } ${ cs.active }` :
-							cs.root;
-
-		return (
-			<div
-				className={ className }
-				onClick={ this.onClick.bind( this ) }>
-				{ this.renderText() }
-			</div>
-		);
-	}
+    return (
+      <div
+        role="presentation"
+        className={className}
+        onClick={this.onClick.bind(this)}
+      >
+        { this.renderText() }
+      </div>
+    );
+  }
 }
 
-export default AddressLineRow;
+AddressRow.propTypes = {
+  address: PropTypes.shape({
+    description: PropTypes.string,
+    matched_substrings: PropTypes.arrayOf(
+      PropTypes.shape({
+        offset: PropTypes.number,
+        length: PropTypes.number,
+      }),
+    ),
+  }).isRequired,
+  isActive: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
+
+export default AddressRow;

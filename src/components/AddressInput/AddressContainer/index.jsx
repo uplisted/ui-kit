@@ -1,41 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cs from './component.pcss';
 
-/**
- * @class AddressContainer
- */
-class AddressContainer extends React.Component
-{
+const AddressContainer = (props) => {
+  const className = props.isHidden ?
+    `${cs.root} ${cs.hidden}` :
+    cs.root;
 
-	static propTypes = {
-		isHidden: React.PropTypes.bool,
-		children: React.PropTypes.node
-	};
 
-	/**
-	 * @constructor
-	 */
-	constructor()
-	{
-		super();
-	}
+  return (
+    <div className={className} >
+      { props.children }
+    </div>
+  );
+};
 
-	/**
-	 * Render component
-	 * @return {XML} xml
-	 */
-	render()
-	{
-		const className = this.props.isHidden ?
-							`${ cs.root } ${ cs.hidden }` :
-							cs.root;
-
-		return (
-			<div className={ className } >
-				{ this.props.children }
-			</div>
-		);
-	}
-}
+AddressContainer.propTypes = {
+  isHidden: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+};
 
 export default AddressContainer;
