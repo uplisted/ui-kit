@@ -17,7 +17,7 @@ const cssExportMap = {};
 export default {
   input: 'src/index.js',
   output: {
-    file: 'dist/lol.jsx',
+    file: 'dist/story.jsx',
     format: 'cjs',
   },
   plugins: [

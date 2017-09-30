@@ -21,7 +21,7 @@
   "homepage": "https://github.com/uplisted/ui#readme",
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.6",
-    "@storybook/addon-info": "^3.2.9",
+    "@storybook/addon-info": "^3.2.6",
     "@storybook/addon-links": "^3.2.6",
     "@storybook/react": "^3.2.8",
     "@storybook/storybook-deployer": "^2.0.0",
@@ -40,6 +40,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.3.0",
+    "node-sass": "^4.5.3",
     "postcss-color-function": "^4.0.0",
     "postcss-custom-properties": "^6.1.0",
     "postcss-loader": "^2.0.6",
@@ -52,12 +53,16 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-postcss": "^0.5.5",
     "rollup-plugin-uglify": "^2.0.1",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2"
   },
   "dependencies": {
+    "moment": "^2.18.1",
     "prop-types": "^15.5.10",
     "react": "^16.0.0",
+    "react-addons-shallow-compare": "^15.6.2",
     "react-async-script-loader": "^0.3.0",
+    "react-dates": "^12.6.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",

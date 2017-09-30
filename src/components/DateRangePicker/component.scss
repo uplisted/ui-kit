@@ -1,0 +1,14 @@
+$react-dates-color-primary: #5f79e5;
+$react-dates-color-secondary: #64AEE5;
+$react-dates-color-primary-shade-1: #99ADFF;
+$react-dates-color-primary-shade-2: #99ADFF;
+$react-dates-color-primary-shade-3: #99ADFF;
+$react-dates-color-primary-shade-4: #99ADFF;
+$react-dates-color-text-focus: white;
+$react-dates-color-focus: #99ADFF;
+@import '~react-dates/css/variables.scss';
+@import '~react-dates/css/styles.scss';
+
+.DateRangePickerInput {
+  border: none;
+}

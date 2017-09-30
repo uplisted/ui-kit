@@ -6,6 +6,7 @@ const Icon = (props) => {
   const style = {
     fontSize: props.fontSize,
     color: props.color,
+    cursor: props.pointer ? 'pointer' : 'default',
     lineHeight: 1,
   };
   const className = `${cs.root} ${cs[`icon-${props.icon}`]}`;
@@ -19,9 +20,11 @@ Icon.propTypes = {
   icon: PropTypes.string.isRequired,
   fontSize: PropTypes.number,
   color: PropTypes.string,
+  pointer: PropTypes.bool,
 };
 
 Icon.defaultProps = {
+  pointer: false,
   fontSize: 16,
   color: '#000000',
 };
