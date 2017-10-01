@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { getViewPortConfig, getColumnStyles } from '../../utils';
 
-class Col extends Component {
+class Col extends React.Component {
   constructor(props) {
     super(props);
 
