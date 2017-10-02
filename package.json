@@ -7,7 +7,8 @@
     "build": "webpack",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "postinstall": "npm-install-peers"
   },
   "repository": {
     "type": "git",
@@ -59,9 +60,11 @@
     "react-async-script-loader": "^0.3.0"
   },
   "dependencies": {
-    "react-dates": "^12.6.0",
-    "react-addons-shallow-compare": "^15.6.2",
     "moment": "^2.18.1",
+    "npm": "^5.4.2",
+    "npm-install-peers": "^1.2.0-rc.3",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-dates": "^12.6.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "recharts": "^1.0.0-apha.5"
