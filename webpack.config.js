@@ -10,18 +10,24 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'index.js',
-    library: 'uplistedUI',
-    libraryTarget: 'umd',
+    library: 'UplistedUI',
+    libraryTarget: 'commonjs2',
   },
 
   /**
    * External modules
    */
   externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-    'prop-types': 'PropTypes',
-    'react-async-script-loader': 'scriptLoader',
+    react: 'react',
+    'react-dom': 'react-dom',
+    'prop-types': 'prop-types',
+    'react-async-script-loader': 'react-async-script-loader',
+    'react-router': 'react-router',
+    'react-router-dom': 'react-router-dom',
+    moment: 'moment',
+    'react-dates': 'react-dates',
+    'react-addons-shallow-compare': 'react-addons-shallow-compare',
+    recharts: 'recharts',
   },
 
   /**

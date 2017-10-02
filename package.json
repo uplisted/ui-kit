@@ -4,7 +4,7 @@
   "description": "Uplisted UI component kit",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack -p",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
@@ -50,20 +50,24 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "prop-types": "^15.5.10",
-    "react-async-script-loader": "^0.3.0"
+    "react-async-script-loader": "^0.3.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "moment": "^2.18.1",
+    "react-dates": "^12.6.0",
+    "react-addons-shallow-compare": "^15.6.2",
+    "recharts": "^1.0.0-apha.5"
   },
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "prop-types": "^15.5.10",
-    "react-async-script-loader": "^0.3.0"
-  },
-  "dependencies": {
-    "moment": "^2.18.1",
-    "react-addons-shallow-compare": "^15.6.2",
-    "react-dates": "^12.6.0",
+    "react-async-script-loader": "^0.3.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "moment": "^2.18.1",
+    "react-dates": "^12.6.0",
+    "react-addons-shallow-compare": "^15.6.2",
     "recharts": "^1.0.0-apha.5"
   }
 }
