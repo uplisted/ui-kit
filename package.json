@@ -7,7 +7,8 @@
     "build": "webpack -p",
     "storybook": "start-storybook -p 3000",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "release": "npm run build && npm run deploy-storybook && git push --tags"
   },
   "repository": {
     "type": "git",
