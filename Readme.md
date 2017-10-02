@@ -1,6 +1,6 @@
 # Installation
 
-## Installing module and dependencies
+## Install with peer dependencies
 ```
 (
   export PKG=uplisted-ui;
@@ -8,4 +8,8 @@
   cat "./node_modules/$PKG/package.json" | jq -r '.peerDependencies' | command sed 's/[\{\},]//g ; s/: /@/g; s/ *//g' | xargs npm install --save "$PKG"
 )
 ```
-## Installing icon font
+
+## Usage 
+```jsx harmony
+import { ComponentName } from 'uplisted-ui'
+```
