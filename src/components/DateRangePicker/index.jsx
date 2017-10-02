@@ -1,10 +1,10 @@
 import React from 'react';
-import { DateRangePicker as AirBnbDateRangePicker } from 'react-dates';
+import ReactDates from 'react-dates';
 import './component.scss';
 
 const DateRangePicker = (props) => {
   return (
-    <AirBnbDateRangePicker {...props} />
+    <ReactDates.DateRangePicker {...props} />
   );
 };
 
