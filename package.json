@@ -8,7 +8,7 @@
     "storybook": "start-storybook -p 3000",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "release": "npm publish && git push --tags && rm -rf dist/"
+    "release": "npm run build && npm publish && git push --tags && rm -rf dist/"
   },
   "repository": {
     "type": "git",
