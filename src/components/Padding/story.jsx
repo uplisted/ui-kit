@@ -19,4 +19,13 @@ storiesOf('Padding', module)
         </Padding>
       </div>
     );
+  }))
+  .add('shortcut', withInfo(() => {
+    return (
+      <div style={style}>
+        <Padding padding={10}>
+          Hello World
+        </Padding>
+      </div>
+    );
   }));

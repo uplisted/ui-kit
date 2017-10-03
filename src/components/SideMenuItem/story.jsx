@@ -9,7 +9,7 @@ storiesOf('SideMenuItem', module)
   .addDecorator(story => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <SideMenuItem icon="listing" href="/test">Hello World</SideMenuItem>
     );

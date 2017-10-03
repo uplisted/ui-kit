@@ -9,7 +9,7 @@ const style = {
 };
 
 storiesOf('TabItem', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <div style={style}>
         <TabItem isActive={false}>

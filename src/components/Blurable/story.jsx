@@ -12,7 +12,7 @@ const content = (
 );
 
 storiesOf('Blurable', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <Blurable content={content} isOpen onToggle={action('blur-detected')}>
         Target content

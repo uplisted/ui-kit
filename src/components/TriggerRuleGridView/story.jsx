@@ -12,7 +12,7 @@ const rule = {
 };
 
 storiesOf('TriggerRuleGridView', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <TriggerRuleGridView rule={rule} />
     );

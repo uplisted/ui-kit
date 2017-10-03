@@ -14,7 +14,7 @@ const style = {
 };
 
 storiesOf('Panel', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <div style={style}>
         <Panel>

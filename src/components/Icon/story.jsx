@@ -5,7 +5,7 @@ import withInfo from '../withInfo';
 import Icon from './index';
 
 storiesOf('Icon', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <Icon icon="search" />
     );
@@ -13,5 +13,10 @@ storiesOf('Icon', module)
   .add('font size and color', withInfo(() => {
     return (
       <Icon icon="search" color="#7178ff" fontSize={20} />
+    );
+  }))
+  .add('hover color', withInfo(() => {
+    return (
+      <Icon icon="search" color="#7178ff" hoverColor="red" fontSize={20} />
     );
   }));

@@ -24,7 +24,7 @@ storiesOf('BreadCrumbs', module)
   .addDecorator(story => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <BreadCrumbs links={links} />
     );

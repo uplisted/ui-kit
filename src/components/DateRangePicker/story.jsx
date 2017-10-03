@@ -9,7 +9,7 @@ const endDate = null;
 const focusedInput = null;
 
 storiesOf('DateRangePicker', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <DateRangePicker
         startDate={startDate}

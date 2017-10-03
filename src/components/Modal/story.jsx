@@ -9,7 +9,7 @@ const onClose = () => {
 };
 
 storiesOf('Modal', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <Modal isOpen width={500} onClose={onClose}>
         Simple modal

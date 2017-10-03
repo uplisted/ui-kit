@@ -20,7 +20,7 @@ storiesOf('UserGridView', module)
   .addDecorator(story => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <div style={{ width: 300, height: 300, marginLeft: 20, marginTop: 20 }}>
         <UserGridView user={user} />

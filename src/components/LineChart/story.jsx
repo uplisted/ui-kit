@@ -32,7 +32,7 @@ const data = [
 ];
 
 storiesOf('LineChart', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <LineChart data={data} />
     );

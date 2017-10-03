@@ -9,7 +9,7 @@ storiesOf('NavTabItem', module)
   .addDecorator(story => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <div>
         <NavTabItem href="/home">Home</NavTabItem>

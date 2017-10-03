@@ -31,7 +31,7 @@ const style = {
 };
 
 storiesOf('RadioButtonGroup', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <div style={style}>
         <RadioButtonGroup options={options} value="one" onChange={onChange} />

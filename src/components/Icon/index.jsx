@@ -2,24 +2,52 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cs from './component.pcss';
 
-const Icon = (props) => {
-  const style = {
-    fontSize: props.fontSize,
-    color: props.color,
-    cursor: props.pointer ? 'pointer' : 'default',
-    lineHeight: 1,
-  };
-  const className = `${cs.root} ${cs[`icon-${props.icon}`]}`;
+class Icon extends React.Component {
+  constructor() {
+    super();
 
-  return (
-    <i style={style} className={className} />
-  );
-};
+    this.state = {
+      hovered: false,
+    };
+  }
+
+  onMouseEnter() {
+    this.setState({
+      hovered: true,
+    });
+  }
+
+  onMouseLeave() {
+    this.setState({
+      hovered: false,
+    });
+  }
+
+  render() {
+    const style = {
+      fontSize: this.props.fontSize,
+      color: this.state.hovered ? this.props.hoverColor : this.props.color,
+      cursor: this.props.pointer ? 'pointer' : 'default',
+      lineHeight: 1,
+    };
+    const className = `${cs.root} ${cs[`icon-${this.props.icon}`]}`;
+
+    return (
+      <i
+        onMouseEnter={this.onMouseEnter.bind(this)}
+        onMouseLeave={this.onMouseLeave.bind(this)}
+        style={style}
+        className={className}
+      />
+    );
+  }
+}
 
 Icon.propTypes = {
   icon: PropTypes.string.isRequired,
   fontSize: PropTypes.number,
   color: PropTypes.string,
+  hoverColor: PropTypes.string,
   pointer: PropTypes.bool,
 };
 
@@ -27,6 +55,7 @@ Icon.defaultProps = {
   pointer: false,
   fontSize: 16,
   color: '#000000',
+  hoverColor: '#000000',
 };
 
 export default Icon;

@@ -5,7 +5,7 @@ import withInfo from '../withInfo';
 import Image from './index';
 
 storiesOf('Image', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <Image src="https://www.w3schools.com/bootstrap/paris.jpg" alt="Paris" width={200} />
     );

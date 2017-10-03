@@ -9,7 +9,7 @@ const Button = (props) => {
 
   return (
     <div
-      className={`${cs.root} ${props.white ? cs.white : cs.default}`}
+      className={`${cs.root} ${cs[props.type]}`}
       style={style}
       onClick={props.onClick}
       role="button"
@@ -25,8 +25,12 @@ const Button = (props) => {
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   fullWidth: PropTypes.bool,
-  white: PropTypes.bool,
   onClick: PropTypes.func,
+  type: PropTypes.oneOf([
+    'default',
+    'white',
+    'transparent',
+  ]),
 };
 
 Button.defaultProps = {
@@ -34,7 +38,7 @@ Button.defaultProps = {
   onClick: () => {
     return false;
   },
-  white: false,
+  type: 'default',
 };
 
 export default Button;

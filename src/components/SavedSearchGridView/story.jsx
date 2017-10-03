@@ -16,7 +16,7 @@ const search = {
 };
 
 storiesOf('SavedSearchGridView', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <div style={{ width: 300, marginTop: 20, marginLeft: 20 }}>
         <SavedSearchGridView search={search} />

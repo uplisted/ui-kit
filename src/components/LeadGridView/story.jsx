@@ -19,7 +19,7 @@ const style = {
 };
 
 storiesOf('LeadGridView', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <div style={style}>
         <LeadGridView lead={lead} />

@@ -16,7 +16,7 @@ const style = {
 };
 
 storiesOf('AddressInput', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <div style={style}>
         <AddressInput

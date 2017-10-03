@@ -9,7 +9,7 @@ storiesOf('BackButton', module)
   .addDecorator(story => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <BackButton backUrl="/test" isHidden={false} />
     );

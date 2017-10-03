@@ -23,7 +23,7 @@ const onChange = () => {
 };
 
 storiesOf('SelectMenu', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <div style={style}>
         <SelectMenu

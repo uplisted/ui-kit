@@ -5,7 +5,7 @@ import withInfo from '../withInfo';
 import ReportDatePicker from './index';
 
 storiesOf('ReportDatePicker', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <ReportDatePicker />
     );

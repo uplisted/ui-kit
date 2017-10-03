@@ -16,7 +16,7 @@ const style = {
 };
 
 storiesOf('TimeLine', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <div style={style}>
         <TimeLine isCollapsed={false} onToggle={onToggle}>

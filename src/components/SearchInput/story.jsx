@@ -9,7 +9,7 @@ const onChange = () => {
 };
 
 storiesOf('SearchInput', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <SearchInput value="Hello World" onChange={onChange} />
     );

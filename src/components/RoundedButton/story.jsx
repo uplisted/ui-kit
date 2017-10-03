@@ -5,7 +5,7 @@ import withInfo from '../withInfo';
 import RoundedButton from './index';
 
 storiesOf('RoundedButton', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <RoundedButton>+</RoundedButton>
     );

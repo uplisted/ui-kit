@@ -9,7 +9,7 @@ const onChange = () => {
 };
 
 storiesOf('CheckBox', module)
-  .add('simple', withInfo(() => {
+  .add('default', withInfo(() => {
     return (
       <CheckBox onChange={onChange} isChecked />
     );
