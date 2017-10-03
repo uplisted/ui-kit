@@ -1,6 +1,6 @@
 {
   "name": "uplisted-ui",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "description": "Uplisted UI component kit",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "storybook": "start-storybook -p 3000",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "release": "npm run build && npm run deploy-storybook && git push --tags"
+    "release": "npm run build && npm run deploy-storybook && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "copy-webpack-plugin": "^4.1.0",
     "css-loader": "^0.28.7",
     "cssnano": "^3.10.0",
     "eslint": "^4.6.1",
@@ -40,24 +41,24 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.3.0",
+    "moment": "^2.18.1",
     "node-sass": "^4.5.3",
     "postcss-color-function": "^4.0.0",
     "postcss-custom-properties": "^6.1.0",
     "postcss-loader": "^2.0.6",
     "postcss-media-minmax": "^3.0.0",
     "postcss-modules": "^0.8.0",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
     "prop-types": "^15.5.10",
+    "react": "^16.0.0",
+    "react-addons-shallow-compare": "^15.6.2",
     "react-async-script-loader": "^0.3.0",
+    "react-dates": "^12.6.0",
+    "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "moment": "^2.18.1",
-    "react-dates": "^12.6.0",
-    "react-addons-shallow-compare": "^15.6.2",
-    "recharts": "^1.0.0-apha.5"
+    "recharts": "^1.0.0-apha.5",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2"
   },
   "peerDependencies": {
     "react": "^16.0.0",

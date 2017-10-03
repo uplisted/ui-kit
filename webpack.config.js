@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 
@@ -78,4 +79,14 @@ module.exports = {
       },
     ],
   },
+
+  /**
+   * Plugin configuration
+   */
+  plugins: [
+    new CopyWebpackPlugin([{
+      from: 'src/font',
+      to: 'font',
+    }]),
+  ],
 };
