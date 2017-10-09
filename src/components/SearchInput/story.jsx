@@ -4,13 +4,9 @@ import withInfo from '../withInfo';
 
 import SearchInput from './index';
 
-const onChange = () => {
-  return false;
-};
-
 storiesOf('SearchInput', module)
   .add('default', withInfo(() => {
     return (
-      <SearchInput value="Hello World" onChange={onChange} />
+      <SearchInput value="Hello World" onChange={() => false} />
     );
   }));

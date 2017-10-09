@@ -21,7 +21,7 @@ const CheckBox = (props) => {
       tabIndex={0}
     >
       <div style={iconStyle}>
-        <Icon color="white" icon="checked" />
+        <Icon pointer color="white" icon="checked" />
       </div>
     </div>
   );

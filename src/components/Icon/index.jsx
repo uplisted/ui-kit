@@ -26,7 +26,7 @@ class Icon extends React.Component {
   render() {
     const style = {
       fontSize: this.props.fontSize,
-      color: this.state.hovered ? this.props.hoverColor : this.props.color,
+      color: this.state.hovered ? (this.props.hoverColor || this.props.color) : this.props.color,
       cursor: this.props.pointer ? 'pointer' : 'default',
       lineHeight: 1,
     };
@@ -55,7 +55,7 @@ Icon.defaultProps = {
   pointer: false,
   fontSize: 16,
   color: '#000000',
-  hoverColor: '#000000',
+  hoverColor: null,
 };
 
 export default Icon;

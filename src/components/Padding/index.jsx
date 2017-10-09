@@ -25,7 +25,7 @@ const Padding = (props) => {
 
 Padding.propTypes = {
   children: PropTypes.node.isRequired,
-  padding: PropTypes.oneOf([
+  padding: PropTypes.oneOfType([
     PropTypes.shape({
       top: PropTypes.number,
       left: PropTypes.number,

@@ -17,7 +17,7 @@ storiesOf('Background', module)
   .add('background image', withInfo(() => {
     return (
       <div style={{ width: '100%', height: 600 }}>
-        <Background url="https://st.depositphotos.com/3562663/5051/i/950/depositphotos_50519051-stock-photo-big-house-modern-style-with.jpg">
+        <Background url="http://coolwallpaperz.info/user-content/uploads/wall/o/74/architecture-x-minimalist-cafe-1179327.jpg">
           Hello World
         </Background>
       </div>

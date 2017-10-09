@@ -4,17 +4,11 @@ import withInfo from '../withInfo';
 
 import TabItem from './index';
 
-const style = {
-  width: 200,
-};
-
 storiesOf('TabItem', module)
   .add('default', withInfo(() => {
     return (
-      <div style={style}>
-        <TabItem isActive={false}>
-          Cost Per Lead
-        </TabItem>
-      </div>
+      <TabItem isActive={false}>
+        Cost Per Lead
+      </TabItem>
     );
   }));

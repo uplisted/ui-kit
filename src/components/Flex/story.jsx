@@ -5,9 +5,9 @@ import withInfo from '../withInfo';
 import Flex from './index';
 
 storiesOf('Flex', module)
-  .add('center alignment', withInfo(() => {
+  .add('justify: space-around', withInfo(() => {
     return (
-      <Flex xs={{ align: 'center', justify: 'center' }}>
+      <Flex xs={{ align: 'center', justify: 'space-around' }}>
         <div>Hello</div>
         <div>Hello</div>
       </Flex>

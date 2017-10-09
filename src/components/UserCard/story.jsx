@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { MemoryRouter } from 'react-router-dom';
 import withInfo from '../withInfo';
 
-import UserGridView from './index';
+import UserCard from './index';
 
 const user = {
   imageSrc: 'https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg',
@@ -16,14 +16,12 @@ const user = {
   createdDate: '12 Jan 2017',
 };
 
-storiesOf('UserGridView', module)
+storiesOf('UserCard', module)
   .addDecorator(story => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
   .add('default', withInfo(() => {
     return (
-      <div style={{ width: 300, height: 300, marginLeft: 20, marginTop: 20 }}>
-        <UserGridView user={user} />
-      </div>
+      <UserCard user={user} />
     );
   }));

@@ -5,7 +5,7 @@ import Flex from '../Flex';
 import Col from '../Col';
 import cs from './component.pcss';
 
-const UserGridView = (props) => {
+const UserCard = (props) => {
   const { user } = props;
 
   return (
@@ -30,7 +30,7 @@ const UserGridView = (props) => {
   );
 };
 
-UserGridView.propTypes = {
+UserCard.propTypes = {
   user: PropTypes.shape({
     imageSrc: PropTypes.string.isRequired,
     fullName: PropTypes.string.isRequired,
@@ -43,4 +43,4 @@ UserGridView.propTypes = {
   }).isRequired,
 };
 
-export default UserGridView;
+export default UserCard;

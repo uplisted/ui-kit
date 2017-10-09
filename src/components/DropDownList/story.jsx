@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import withInfo from '../withInfo';
 
-import RadioButtonGroup from './index';
+import DropDownList from './index';
 
 const options = [
   {
@@ -13,15 +13,15 @@ const options = [
     value: 'two',
     label: 'Two',
   },
-  {
-    value: 'three',
-    label: 'Three',
-  },
 ];
 
-storiesOf('RadioButtonGroup', module)
+storiesOf('DropDownList', module)
   .add('default', withInfo(() => {
     return (
-      <RadioButtonGroup options={options} value="one" onChange={() => false} />
+      <DropDownList
+        options={options}
+        value="two"
+        onChange={() => false}
+      />
     );
   }));

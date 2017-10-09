@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import withInfo from '../withInfo';
 
-import SavedSearchGridView from './index';
+import SavedSearchCard from './index';
 
 const search = {
   location: 'Yerevan, Armenia',
@@ -15,11 +15,9 @@ const search = {
   baths: '5',
 };
 
-storiesOf('SavedSearchGridView', module)
+storiesOf('SavedSearchCard', module)
   .add('default', withInfo(() => {
     return (
-      <div style={{ width: 300, marginTop: 20, marginLeft: 20 }}>
-        <SavedSearchGridView search={search} />
-      </div>
+      <SavedSearchCard search={search} />
     );
   }));

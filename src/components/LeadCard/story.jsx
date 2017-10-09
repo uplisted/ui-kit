@@ -12,17 +12,9 @@ const lead = {
   lastActive: 'Now',
 };
 
-const style = {
-  width: 420,
-  marginTop: 20,
-  marginLeft: 20,
-};
-
 storiesOf('LeadGridView', module)
   .add('default', withInfo(() => {
     return (
-      <div style={style}>
-        <LeadGridView lead={lead} />
-      </div>
+      <LeadGridView lead={lead} />
     );
   }));

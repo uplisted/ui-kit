@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import Blurable from '../Blurable';
 import Icon from '../Icon';
 import Flex from '../Flex';
+import DropDownList from '../DropDownList';
 import cs from './component.pcss';
 
-class SelectMenu extends React.Component {
+class FormSelect extends React.Component {
   constructor() {
     super();
 
@@ -25,7 +26,7 @@ class SelectMenu extends React.Component {
   onChange(item, evt) {
     evt.stopPropagation();
     this.onToggle();
-    this.props.onChange();
+    this.props.onChange(item);
   }
 
   renderLabel() {
@@ -41,18 +42,12 @@ class SelectMenu extends React.Component {
   }
 
   renderContent() {
-    const map = (item, index) => {
-      return (
-        <div key={index} role="presentation" onClick={this.onChange.bind(this, item)}>
-          {item.label}
-        </div>
-      );
-    };
-
     return (
-      <div className={cs.content}>
-        {this.props.options.map(map)}
-      </div>
+      <DropDownList
+        options={this.props.options}
+        value={this.props.value}
+        onChange={this.onChange.bind(this)}
+      />
     );
   }
 
@@ -78,7 +73,7 @@ class SelectMenu extends React.Component {
   }
 }
 
-SelectMenu.propTypes = {
+FormSelect.propTypes = {
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
@@ -88,8 +83,8 @@ SelectMenu.propTypes = {
   placeholder: PropTypes.string,
 };
 
-SelectMenu.defaultProps = {
+FormSelect.defaultProps = {
   placeholder: '',
 };
 
-export default SelectMenu;
+export default FormSelect;

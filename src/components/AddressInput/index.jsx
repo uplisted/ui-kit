@@ -38,7 +38,6 @@ class AddressInput extends React.Component {
           });
         }
 
-        this.input.closest('[tabindex]').focus();
         break;
       }
       case 38: {

@@ -4,7 +4,7 @@ import Flex from '../Flex';
 import Icon from '../Icon';
 import cs from './component.pcss';
 
-const SavedSearchGridView = (props) => {
+const SavedSearchCard = (props) => {
   const { search } = props;
 
   return (
@@ -65,7 +65,7 @@ const SavedSearchGridView = (props) => {
   );
 };
 
-SavedSearchGridView.propTypes = {
+SavedSearchCard.propTypes = {
   search: PropTypes.shape({
     location: PropTypes.string.isRequired,
     minPrice: PropTypes.string.isRequired,
@@ -78,4 +78,4 @@ SavedSearchGridView.propTypes = {
   }).isRequired,
 };
 
-export default SavedSearchGridView;
+export default SavedSearchCard;

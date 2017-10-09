@@ -42,12 +42,13 @@ class Blurable extends React.Component {
   render() {
     const style = {
       display: this.props.isOpen ? 'block' : 'none',
+      transform: `translateY(${this.props.top}px)`,
     };
 
     return (
       <div className={cs.root} ref={this.getRef.bind(this)}>
         {this.props.children}
-        <div style={style} ref={this.getContentRef.bind(this)}>
+        <div style={style} className={cs.content} ref={this.getContentRef.bind(this)}>
           {this.props.content}
         </div>
       </div>
@@ -60,6 +61,11 @@ Blurable.propTypes = {
   content: PropTypes.node.isRequired,
   isOpen: PropTypes.bool.isRequired,
   onToggle: PropTypes.func.isRequired,
+  top: PropTypes.number,
+};
+
+Blurable.defaultProps = {
+  top: 5,
 };
 
 export default Blurable;

@@ -1,9 +1,12 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+// generate entry file
+require('./create-entry-file')();
+
 module.exports = {
 
-  entry: './src/index.js',
+  entry: './src/entry.js',
 
   /**
    * Output configuration
@@ -11,7 +14,6 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'index.js',
-    library: 'UplistedUI',
     libraryTarget: 'commonjs2',
   },
 

@@ -6,9 +6,8 @@ const Modal = (props) => {
   const rootClassName = props.isOpen ? '' : cs.hidden;
   const contentStyle = {
     width: props.width,
-    padding: props.hasPadding ? '61px 74px 43px 74px' : 0,
     overflowY: props.overflow,
-    maxHeight: `calc(100vh - ${props.heightMargin}px)`,
+    maxHeight: props.maxHeight || 'calc(100vh - 180px)',
   };
 
   return (
@@ -26,15 +25,13 @@ Modal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   width: PropTypes.number.isRequired,
   onClose: PropTypes.func.isRequired,
-  hasPadding: PropTypes.bool,
+  maxHeight: PropTypes.string,
   overflow: PropTypes.string,
-  heightMargin: PropTypes.number,
 };
 
 Modal.defaultProps = {
-  hasPadding: true,
   overflow: 'scroll',
-  heightMargin: 180,
+  maxHeight: null,
 };
 
 export default Modal;

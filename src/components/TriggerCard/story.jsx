@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import withInfo from '../withInfo';
 
-import TriggerRuleGridView from './index';
+import TriggerCard from './index';
 
 const rule = {
   date: '12 Jan 2017',
@@ -11,9 +11,9 @@ const rule = {
   name: 'Test',
 };
 
-storiesOf('TriggerRuleGridView', module)
+storiesOf('TriggerCard', module)
   .add('default', withInfo(() => {
     return (
-      <TriggerRuleGridView rule={rule} />
+      <TriggerCard rule={rule} />
     );
   }));

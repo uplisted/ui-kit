@@ -1,6 +1,6 @@
 # Installation
 
-## Install with peer dependencies
+Install module with peer dependencies by running this command
 ```
 (
   export PKG=uplisted-ui;
@@ -8,9 +8,9 @@
 )
 ```
 
-## Installing fonts
 
-Create fonts.css file and import to your entry point file
+Create new file named fonts.css and include following code
+to connect Lato and icon font
 ```
 /**
  * Lato, google fonts

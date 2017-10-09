@@ -1,12 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import withInfo from '../withInfo';
 
 import Blurable from './index';
 
 const content = (
-  <div style={{ width: 200, height: 200, backgroundColor: '#7178ff' }}>
+  <div>
     Blurable content
   </div>
 );
@@ -14,7 +13,11 @@ const content = (
 storiesOf('Blurable', module)
   .add('default', withInfo(() => {
     return (
-      <Blurable content={content} isOpen onToggle={action('blur-detected')}>
+      <Blurable
+        content={content}
+        isOpen
+        onToggle={() => false}
+      >
         Target content
       </Blurable>
     );

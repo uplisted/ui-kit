@@ -9,7 +9,7 @@ import Padding from '../Padding';
 import Icon from '../Icon';
 import cs from './component.pcss';
 
-const TriggerRuleGridView = (props) => {
+const TriggerCard = (props) => {
   return (
     <Panel>
       <Header>
@@ -38,7 +38,7 @@ const TriggerRuleGridView = (props) => {
   );
 };
 
-TriggerRuleGridView.propTypes = {
+TriggerCard.propTypes = {
   rule: PropTypes.shape({
     date: PropTypes.string.isRequired,
     boostDays: PropTypes.string.isRequired,
@@ -47,4 +47,4 @@ TriggerRuleGridView.propTypes = {
   }).isRequired,
 };
 
-export default TriggerRuleGridView;
+export default TriggerCard;

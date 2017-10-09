@@ -9,7 +9,7 @@ import Text from '../Text';
 import Background from '../Background';
 import cs from './component.pcss';
 
-const LeadGridView = (props) => {
+const LeadCard = (props) => {
   return (
     <div className={cs.root}>
       <Padding padding={{ top: 14, right: 15, bottom: 24, left: 15 }}>
@@ -73,7 +73,7 @@ const LeadGridView = (props) => {
   );
 };
 
-LeadGridView.propTypes = {
+LeadCard.propTypes = {
   lead: PropTypes.shape({
     profilePicSrc: PropTypes.string.isRequired,
     fullName: PropTypes.string.isRequired,
@@ -83,4 +83,4 @@ LeadGridView.propTypes = {
   }).isRequired,
 };
 
-export default LeadGridView;
+export default LeadCard;

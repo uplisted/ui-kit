@@ -4,14 +4,10 @@ import withInfo from '../withInfo';
 
 import Modal from './index';
 
-const onClose = () => {
-  return false;
-};
-
 storiesOf('Modal', module)
   .add('default', withInfo(() => {
     return (
-      <Modal isOpen width={500} onClose={onClose}>
+      <Modal isOpen width={500} onClose={() => false}>
         Simple modal
       </Modal>
     );
