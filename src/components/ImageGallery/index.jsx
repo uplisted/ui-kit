@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from '../Modal';
 import Flex from '../Flex';
+import Col from '../Col';
 import Icon from '../Icon';
+import Padding from '../Padding';
 import cs from './component.pcss';
 
 class ImageGallery extends React.Component {
@@ -56,9 +58,17 @@ class ImageGallery extends React.Component {
     const map = (item, index) => {
       const className = this.state.activeIndex === index ? cs.active : '';
       return (
-        <div role="presentation" onClick={this.onSlideClick.bind(this, index)} key={index} className={`${cs.slideItem} ${className}`}>
-          <img src={item} alt="Slide item" />
-        </div>
+        <Col xs={{ size: 3 }} key={index}>
+          <Padding padding={20}>
+            <div
+              role="presentation"
+              onClick={this.onSlideClick.bind(this, index)}
+              className={`${cs.slideItem} ${className}`}
+            >
+              <img src={item} alt="Slide item" />
+            </div>
+          </Padding>
+        </Col>
       );
     };
 
@@ -73,10 +83,10 @@ class ImageGallery extends React.Component {
     return (
       <Modal
         onClose={this.props.onClose}
-        width={700}
+        width={936}
         isOpen={this.props.isOpen}
         overflow="hidden"
-        maxHeight={1200}
+        maxHeight={1000}
       >
         <div className={cs.mainImage}>
           <div
@@ -85,7 +95,7 @@ class ImageGallery extends React.Component {
             className={`${cs.arrow} ${cs.left}`}
             onClick={this.onSlideLeft.bind(this)}
           >
-            <Icon icon="left-arrow" color="#c3c3c3" fontSize={18} />
+            <Icon pointer icon="left-arrow" color="#c3c3c3" fontSize={18} />
           </div>
           <div
             role="button"
@@ -93,12 +103,12 @@ class ImageGallery extends React.Component {
             className={`${cs.arrow} ${cs.right}`}
             onClick={this.onSlideRight.bind(this)}
           >
-            <Icon icon="right-arrow" color="#c3c3c3" fontSize={18} />
+            <Icon pointer icon="right-arrow" color="#c3c3c3" fontSize={18} />
           </div>
           <img src={this.props.images[this.state.activeIndex]} alt="Main slide" />
         </div>
         <div className={cs.slideContent}>
-          <Flex>
+          <Flex xs={{ wrap: false }}>
             {this.renderImages()}
           </Flex>
         </div>
