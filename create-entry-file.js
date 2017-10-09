@@ -6,6 +6,9 @@ const componentsDirectory = './src/components';
 let fileContent = 'import \'./css/normalize.pcss\';\n\n';
 
 module.exports = () => {
+  // remove entry file
+  fs.unlinkSync(entryFile);
+
   // scan components directory
   const files = fs.readdirSync(componentsDirectory);
 
