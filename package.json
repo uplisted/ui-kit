@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack -p",
-    "storybook": "start-storybook -p 3000",
+    "start": "start-storybook -p 3000",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "release": "npm run build && npm publish && git push --tags && rm -rf dist/ && rm -rf src/entry.js"
