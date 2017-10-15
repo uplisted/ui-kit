@@ -20,7 +20,10 @@ const Image = (props) => {
 Image.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  width: PropTypes.number.isRequired,
+  width: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]).isRequired,
   type: PropTypes.oneOf([
     'rounded',
     'circle',

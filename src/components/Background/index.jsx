@@ -8,7 +8,7 @@ const Background = (props) => {
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     width: '100%',
-    height: '100%',
+    height: props.fullHeight ? '100%' : 'auto',
   };
 
   return (
@@ -27,11 +27,15 @@ Background.propTypes = {
 
   // Background image url
   url: PropTypes.string,
+
+  // Is container full height
+  fullHeight: PropTypes.bool,
 };
 
 Background.defaultProps = {
   color: '',
   url: '',
+  fullHeight: false,
 };
 
 export default Background;
