@@ -1,6 +1,6 @@
 {
   "name": "uplisted-ui",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Uplisted UI component kit",
   "main": "dist/index.js",
   "scripts": {
