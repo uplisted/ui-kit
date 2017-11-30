@@ -27,10 +27,6 @@ module.exports = {
     'react-async-script-loader': 'react-async-script-loader',
     'react-router': 'react-router',
     'react-router-dom': 'react-router-dom',
-    moment: 'moment',
-    'react-dates': 'react-dates',
-    'react-addons-shallow-compare': 'react-addons-shallow-compare',
-    recharts: 'recharts',
   },
 
   /**
