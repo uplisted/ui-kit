@@ -8,17 +8,16 @@ const Button = (props) => {
   };
 
   return (
-    <div
+    <button
       className={`${cs.root} ${cs[props.type]}`}
       style={style}
       onClick={props.onClick}
-      role="button"
-      tabIndex={0}
+      type={props.formType}
     >
       <div className={cs.content}>
         {props.children}
       </div>
-    </div>
+    </button>
   );
 };
 
@@ -30,6 +29,11 @@ Button.propTypes = {
     'default',
     'white',
     'transparent',
+    'facebook',
+  ]),
+  formType: PropTypes.oneOf([
+    'button',
+    'submit',
   ]),
 };
 
@@ -39,6 +43,7 @@ Button.defaultProps = {
     return false;
   },
   type: 'default',
+  formType: 'button',
 };
 
 export default Button;

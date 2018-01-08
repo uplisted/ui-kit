@@ -22,6 +22,16 @@ storiesOf('Button', module)
       </div>
     );
   }))
+  .add('facebook', withInfo(() => {
+    return (
+      <Button type="facebook" fullWidth>Connect to Facebook</Button>
+    );
+  }))
+  .add('submit', withInfo(() => {
+    return (
+      <Button type="white" formType="submit" fullWidth>Submit</Button>
+    );
+  }))
   .add('full width', withInfo(() => {
     return (
       <Button fullWidth>Hello World</Button>
