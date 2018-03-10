@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/click-events-have-key-events": "off"
+  }
+}

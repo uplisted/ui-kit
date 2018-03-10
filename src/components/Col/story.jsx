@@ -10,15 +10,13 @@ const style = {
 };
 
 storiesOf('Col', module)
-  .add('responsive grid', withInfo(() => {
-    return (
-      <Flex>
-        <Col xs={12} lg={6}>
-          <div style={style}>col-xs-12, col-lg-6</div>
-        </Col>
-        <Col xs={12} lg={6}>
-          <div style={style}>col-xs-12, col-lg-6</div>
-        </Col>
-      </Flex>
-    );
-  }));
+  .add('responsive grid', withInfo(() => (
+    <Flex>
+      <Col xs={12} lg={6}>
+        <div style={style}>col-xs-12, col-lg-6</div>
+      </Col>
+      <Col xs={12} lg={6}>
+        <div style={style}>col-xs-12, col-lg-6</div>
+      </Col>
+    </Flex>
+  )));

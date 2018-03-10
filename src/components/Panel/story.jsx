@@ -7,15 +7,13 @@ import PanelHeader from '../PanelHeader';
 import PanelContent from '../PanelContent';
 
 storiesOf('Panel', module)
-  .add('default', withInfo(() => {
-    return (
-      <Panel>
-        <PanelHeader>
-          Panel Header
-        </PanelHeader>
-        <PanelContent>
-          Panel Content
-        </PanelContent>
-      </Panel>
-    );
-  }));
+  .add('default', withInfo(() => (
+    <Panel>
+      <PanelHeader>
+        Panel Header
+      </PanelHeader>
+      <PanelContent>
+        Panel Content
+      </PanelContent>
+    </Panel>
+  )));

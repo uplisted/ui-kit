@@ -12,27 +12,13 @@ module.exports = {
         loader: 'eslint-loader',
       },
       {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
-      },
-      {
-        test: /\.pcss$/,
+        test: /\.css$/,
         use: [
           'style-loader',
           { loader: 'css-loader', options: { modules: true } },
           'postcss-loader',
         ],
-      },
-      {
-        test: /\.woff(2)?$/,
-        use: [
-          'file-loader',
-        ],
-      },
+      }
     ],
   },
 };

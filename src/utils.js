@@ -2,9 +2,7 @@
  * Calculates flex basis based on 12 item grid
  * @param size
  */
-const calculateSize = (size) => {
-  return `${(100 / 12) * size}%`;
-};
+const calculateSize = size => `${(100 / 12) * size}%`;
 
 /**
  * Detect configuration based on view port size
@@ -63,14 +61,12 @@ const getViewPortConfig = (width, config) => {
  * @param config
  * @returns {{}}
  */
-const getRowStyles = (config) => {
-  return {
-    alignItems: config.align || 'stretch',
-    justifyContent: config.justify || 'flex-start',
-    flexWrap: config.wrap || false,
-    height: config.height || 'auto',
-  };
-};
+const getRowStyles = config => ({
+  alignItems: config.align || 'stretch',
+  justifyContent: config.justify || 'flex-start',
+  flexWrap: config.wrap || false,
+  height: config.height || 'auto',
+});
 
 /**
  * Return flex column styles based on config

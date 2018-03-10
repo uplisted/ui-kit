@@ -1,0 +1,55 @@
+.root {
+  outline: none;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 1px solid #e2e4e8;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.root:hover .checkmark {
+  background-color: #e2e4e8;
+}
+
+.root.checked .checkmark {
+  border-color: transparent;
+  background-color: #7178ff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.root.checked .checkmark:after {
+  display: block;
+}
+
+.root .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

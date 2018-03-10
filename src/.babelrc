@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "stage-1",
+    "react",
+    [
+    	"env",
+    	{
+    		"modules": false
+    	}
+    ]
+  ],
+  "plugins": [
+    "external-helpers"
+  ]
+}

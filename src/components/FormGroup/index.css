@@ -1,0 +1,11 @@
+.label {
+  font-family: Lato, sans-serif;
+  color: #7f8590;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.root {
+  margin-bottom: 30px;
+}
