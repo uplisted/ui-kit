@@ -22,7 +22,12 @@ storiesOf('Button', module)
   .add('facebook', withInfo(() => <Button type="facebook" fullWidth>Connect to Facebook</Button>))
 
   // Submit button
-  .add('submit', withInfo(() => <Button type="white" formType="submit" fullWidth>Submit</Button>))
+  .add('submit', withInfo(() => (
+    <div style={{ width: 300, height: 300 }}>
+      <Button formType="submit">Submit</Button>
+      <Button formType="submit" submitting>Submitting</Button>
+    </div>
+  )))
 
   // Full width
   .add('full width', withInfo(() => <Button fullWidth>Full width</Button>));

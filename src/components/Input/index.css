@@ -12,6 +12,10 @@
   border-color: #7178ff;
 }
 
+.error {
+  border-color: red !important;
+}
+
 .fullBordered {
   font-size: 15px;
   border-radius: 3px;

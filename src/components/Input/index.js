@@ -4,10 +4,11 @@ import cs from './index.css';
 
 const Input = (props) => {
   const borderClassName = props.bordered ? cs.fullBordered : cs.bottomBordered;
+  const errorClass = props.hasError ? cs.error : '';
 
   return (
     <input
-      className={`${cs.root} ${borderClassName}`}
+      className={`${cs.root} ${borderClassName} ${errorClass}`}
       value={props.value}
       placeholder={props.placeholder}
       onChange={props.onChange}
@@ -24,6 +25,7 @@ Input.propTypes = {
   onChange: PropTypes.func,
   bordered: PropTypes.bool,
   readonly: PropTypes.bool,
+  hasError: PropTypes.bool,
 };
 
 Input.defaultProps = {
@@ -32,6 +34,7 @@ Input.defaultProps = {
   type: 'text',
   onChange: () => false,
   readonly: false,
+  hasError: false,
 };
 
 export default Input;

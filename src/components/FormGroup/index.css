@@ -6,6 +6,10 @@
   margin-bottom: 10px;
 }
 
+.label.error {
+  color: red;
+}
+
 .root {
   margin-bottom: 30px;
 }

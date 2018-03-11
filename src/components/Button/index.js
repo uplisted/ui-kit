@@ -7,9 +7,11 @@ const Button = (props) => {
     width: props.fullWidth ? '100%' : 150,
   };
 
+  const submittingClass = props.submitting ? cs.submitting : '';
+
   return (
     <button
-      className={`${cs.root} ${cs[props.type]}`}
+      className={`${cs.root} ${cs[props.type]} ${submittingClass}`}
       style={style}
       onClick={props.onClick}
       type={props.formType}
@@ -35,6 +37,7 @@ Button.propTypes = {
     'button',
     'submit',
   ]),
+  submitting: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -42,6 +45,7 @@ Button.defaultProps = {
   onClick: () => false,
   type: 'default',
   formType: 'button',
+  submitting: false,
 };
 
 export default Button;

@@ -5,8 +5,13 @@ import withInfo from '../withInfo';
 import FormGroup from './index';
 
 storiesOf('FormGroup', module)
-  .add('label', withInfo(() => (
+  .add('default', withInfo(() => (
     <FormGroup label="Label">
+      <div>Content</div>
+    </FormGroup>
+  )))
+  .add('error', withInfo(() => (
+    <FormGroup label="Label" errorText="Email is required">
       <div>Content</div>
     </FormGroup>
   )));

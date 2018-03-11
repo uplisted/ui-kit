@@ -23,6 +23,16 @@
   background-color: #7178ff;
 }
 
+.submitting {
+  color: #ffffff;
+  border-color: transparent;
+  background-color: rgba(113, 120, 255, .48); 
+}
+
+.submitting:active {
+  top: 0px !important;
+}
+
 .white {
   color: #7178ff;
   border-color: #7178ff;
