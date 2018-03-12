@@ -5,7 +5,7 @@ const Padding = (props) => {
   const { padding } = props;
   let style;
 
-  if (!Object.is(padding)) {
+  if (typeof padding === 'number') {
     style = { padding };
   } else {
     style = {
