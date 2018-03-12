@@ -5,7 +5,7 @@ const Padding = (props) => {
   const { padding } = props;
   let style;
 
-  if (!Number.isNaN(padding)) {
+  if (!Object.is(padding)) {
     style = { padding };
   } else {
     style = {
