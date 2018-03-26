@@ -8,7 +8,7 @@ const FormGroup = (props) => {
   return (
     <div className={cs.root}>
       <div className={className}>
-        {props.label}
+        {props.errorText !== '' ? props.errorText : props.label}
       </div>
       <div>
         {props.children}
