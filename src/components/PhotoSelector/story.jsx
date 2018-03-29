@@ -7,6 +7,9 @@ import PhotoSelector from './index';
 const photos = [
   'https://s3.amazonaws.com/retsly-importd-production/test_data/listings/25.jpg',
   'https://s3.amazonaws.com/retsly-importd-production/test_data/listings/27.jpg',
+  'https://s3.amazonaws.com/retsly-importd-production/test_data/listings/28.jpg',
+  'https://s3.amazonaws.com/retsly-importd-production/test_data/listings/29.jpg',
+  'https://s3.amazonaws.com/retsly-importd-production/test_data/listings/30.jpg',
 ];
 
 const selected = [

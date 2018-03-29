@@ -33,7 +33,7 @@ class PhotoSelector extends Component {
     const map = (item, index) => {
       const isSelected = this.props.selected.indexOf(item) !== -1;
       return (
-        <Col key={index} xs={{ right: 12 }}>
+        <Col key={index} xs={{ right: 15, top: 15 }}>
           <Item item={item} isSelected={isSelected} onToggle={this.props.onToggle} />
         </Col>
       );
@@ -46,7 +46,7 @@ class PhotoSelector extends Component {
     return (
       <div className={cs.root}>
         <div>
-          <Flex xs={{ wrap: 'no-wrap' }}>
+          <Flex xs={{ wrap: 'nowrap' }}>
             {this.renderItems()}
           </Flex>
         </div>
