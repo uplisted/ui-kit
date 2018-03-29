@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Flex from '../Flex';
 import Col from '../Col';
 import CheckBox from '../CheckBox';
-import Padding from '../Padding';
 import cs from './index.css';
 
 const Item = (props) => {
@@ -34,10 +33,8 @@ class PhotoSelector extends Component {
     const map = (item, index) => {
       const isSelected = this.props.selected.indexOf(item) !== -1;
       return (
-        <Col key={index}>
-          <Padding padding={12}>
-            <Item item={item} isSelected={isSelected} onToggle={this.props.onToggle} />
-          </Padding>
+        <Col key={index} xs={{ right: 12 }}>
+          <Item item={item} isSelected={isSelected} onToggle={this.props.onToggle} />
         </Col>
       );
     };
