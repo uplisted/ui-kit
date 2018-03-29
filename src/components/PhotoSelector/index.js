@@ -46,7 +46,7 @@ class PhotoSelector extends Component {
     return (
       <div className={cs.root}>
         <div>
-          <Flex xs={{ wrap: 'nowrap' }}>
+          <Flex xs={{ wrap: 'wrap' }}>
             {this.renderItems()}
           </Flex>
         </div>
