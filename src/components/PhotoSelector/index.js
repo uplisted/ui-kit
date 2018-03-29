@@ -8,9 +8,12 @@ import cs from './index.css';
 
 const Item = (props) => {
   const className = props.isSelected ? cs.active : '';
+  const onToggle = () => {
+    props.onToggle(props.item);
+  };
 
   return (
-    <div role="presentation" onClick={props.onToggle(props.item)} className={`${cs.slideItem} ${className}`}>
+    <div role="presentation" onClick={onToggle} className={`${cs.slideItem} ${className}`}>
       <div className={cs.checkBox}>
         <CheckBox isChecked={props.isSelected} onChange={() => false} />
       </div>
