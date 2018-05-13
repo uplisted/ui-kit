@@ -26,6 +26,6 @@ storiesOf('DropDownMenu', module)
       placeholder="Price"
       items={items}
       active={items[0]}
-      onChange={() => false}
+      onChange={() => true}
     />
   )));

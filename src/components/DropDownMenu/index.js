@@ -25,8 +25,8 @@ class DropDownMenu extends React.Component {
   }
 
   onChange(item) {
-    this.props.onChange(item);
     this.onToggle();
+    this.props.onChange(item);
   }
 
   renderItems() {
@@ -51,7 +51,7 @@ class DropDownMenu extends React.Component {
   }
 
   render() {
-    const color = this.state.isOpen ? '#7588ff' : '#c9cdd3';
+    const color = this.state.isOpen ? '#7588ff' : '#2a2a2a';
 
     return (
       <Blurable
