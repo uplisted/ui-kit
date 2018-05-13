@@ -1,0 +1,20 @@
+.root {
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
+  box-shadow: 0 0 8px 0 rgba(209, 209, 209, 0.5);
+  border-radius: 5px;
+}
+
+.downArrow {
+  position: relative;
+  top: -3px;
+  border: solid #7588ff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
