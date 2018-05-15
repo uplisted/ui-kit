@@ -16,4 +16,5 @@ export Panel from './components/Panel';
 export PanelContent from './components/PanelContent';
 export PanelHeader from './components/PanelHeader';
 export PhotoSelector from './components/PhotoSelector';
+export RadioButtonGroup from './components/RadioButtonGroup';
 export Text from './components/Text';
