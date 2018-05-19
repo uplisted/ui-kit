@@ -7,13 +7,19 @@ const Button = (props) => {
     width: props.fullWidth ? '100%' : 150,
   };
 
+  const onClick = (event) => {
+    if (!props.submitting) {
+      props.onClick(event);
+    }
+  };
+
   const submittingClass = props.submitting ? cs.submitting : '';
 
   return (
     <button
       className={`${cs.root} ${cs[props.type]} ${submittingClass}`}
       style={style}
-      onClick={props.onClick}
+      onClick={onClick}
       type={props.formType}
     >
       <div className={cs.content}>
