@@ -4,9 +4,12 @@ import PropTypes from 'prop-types';
 const Content = (props) => {
   const style = {
     backgroundColor: 'white',
-    padding: '20px 30px',
     boxSizing: 'border-box',
   };
+
+  if (props.isPadded) {
+    style.padding = '20px 30px';
+  }
 
   return (
     <div style={style}>
@@ -17,6 +20,11 @@ const Content = (props) => {
 
 Content.propTypes = {
   children: PropTypes.node.isRequired,
+  isPadded: PropTypes.bool,
+};
+
+Content.defaultProps = {
+  isPadded: true,
 };
 
 export default Content;
