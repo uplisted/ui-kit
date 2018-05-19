@@ -23,14 +23,6 @@
   background-color: #7178ff;
 }
 
-.submitting {
-  color: #ffffff;
-  border-color: transparent;
-  background-color: rgba(113, 120, 255, .48);
-  position: relative;
-  top: 3px;
-}
-
 .white {
   color: #7178ff;
   border-color: #7178ff;
@@ -50,6 +42,14 @@
 }
 
 .root:active {
+  position: relative;
+  top: 3px;
+}
+
+.submitting {
+  color: #ffffff;
+  border-color: transparent;
+  background-color: rgba(113, 120, 255, .48);
   position: relative;
   top: 3px;
 }
