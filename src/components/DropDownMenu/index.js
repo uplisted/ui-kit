@@ -25,7 +25,6 @@ class DropDownMenu extends React.Component {
   }
 
   onChange(item) {
-    this.onToggle();
     this.props.onChange(item);
   }
 
