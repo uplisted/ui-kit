@@ -26,15 +26,25 @@ class Blurable extends React.Component {
   }
 
   clickHandler(evt) {
+    const {
+      onToggle,
+      isOpen,
+      closeOnContentClick,
+    } = this.props;
+
     // needs to be opened
     // ref contains target and !this.props.isOpen
-    if (this.ref.contains(evt.target) && !this.props.isOpen) {
-      this.props.onToggle();
+    if (this.ref.contains(evt.target) && !isOpen) {
+      onToggle();
       return;
     }
 
-    // needs to be closed
-    if (!this.contentRef.contains(evt.target) && this.props.isOpen) {
+    if (this.props.isOpen) {
+      if (!closeOnContentClick && this.contentRef.contains(evt.target)) {
+        return;
+      }
+
+      // needs to be closed
       this.props.onToggle();
     }
   }
@@ -62,10 +72,12 @@ Blurable.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onToggle: PropTypes.func.isRequired,
   top: PropTypes.number,
+  closeOnContentClick: PropTypes.bool,
 };
 
 Blurable.defaultProps = {
   top: 5,
+  closeOnContentClick: false,
 };
 
 export default Blurable;

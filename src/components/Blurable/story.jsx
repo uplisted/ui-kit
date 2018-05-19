@@ -16,7 +16,10 @@ storiesOf('Blurable', module)
       content={content}
       isOpen
       onToggle={() => false}
+      closeOnContentClick={false}
     >
-      Target content
+      <div>
+        Target content
+      </div>
     </Blurable>
   )));

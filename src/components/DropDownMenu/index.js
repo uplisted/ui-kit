@@ -59,10 +59,11 @@ class DropDownMenu extends React.Component {
         isOpen={this.state.isOpen}
         onToggle={this.onToggle}
         top={10}
+        closeOnContentClick
       >
         <div className={cs.root}>
           <Flex xs={{ align: 'center' }}>
-            <Col xs={{ left: 3 }}>
+            <Col>
               <Text fontSize={18} color={color}>{this.props.placeholder}:</Text>
             </Col>
             <Col xs={{ left: 3 }}>
